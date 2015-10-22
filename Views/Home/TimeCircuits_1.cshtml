@@ -1,0 +1,27 @@
+@using Fritz.Bttf.TagHelpers
+@addTagHelper "*, Fritz.Bttf"
+@{
+	
+	var destTime = new DateTime(1994, 10, 27, 16, 20, 0, 0);
+	var nowTime = new DateTime(2015, 10, 20, 18, 30, 0, 0);
+	var fromTime = new DateTime(2000, 5, 27, 18, 38, 0, 0);
+	
+}
+
+	<div id="timeCircuits">
+
+		<date-dest date="destTime" type="DateDestType.Destination" />
+		
+		<div class="row"><br/></div>
+
+		<date-dest date="nowTime" type="DateDestType.Present" />
+		
+		<div class="row"><br/></div>
+
+		<date-dest date="fromTime" type="DateDestType.LastDeparted" />
+		
+		<div class="row"><br/></div>
+
+
+	<!-- END TIME CIRCUITS -->		
+	</div>

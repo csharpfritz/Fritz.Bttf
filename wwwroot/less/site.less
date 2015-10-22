@@ -1,0 +1,122 @@
+@import "theme.less";
+
+@font-face {
+	font-family: 'Digit';
+	src: url('/css/DS-DIGII.TTF') format('truetype');
+} 
+
+@datePart: {
+	position: relative;
+	background-color: #000;
+	min-height: 64pt;
+	display: block;
+	z-index: 0;
+};
+
+#timeCircuits {
+	
+	background-color: @circuitsBg;
+	width: 650px;
+	margin-top: 20px;
+	z-index: -2;
+	
+	.lbl {
+		display: inline-block;
+		padding: 3px 12px;
+		color: @labelFg;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-transform: uppercase;
+		background-color: @labelBg;
+		margin: 1px 30%;
+	}
+	
+	.timeLabel {
+		
+		display: block;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		color: #FFF;
+		background-color: #000;
+		font-size: 10pt;
+		
+	}
+	
+	.digit {
+		font-family: "Digit";
+		left: 0px;
+		top: 0px;
+		font-style: normal;
+		font-size: 48pt;
+		position: absolute;
+		
+		&.bg {
+			opacity: 0.2;
+			background-color: transparent;
+			z-index: 1;
+		}
+			
+		&.dest {
+			color: @destColor;
+			z-index: 2;
+		}
+		&.now {
+			color: @nowColor;
+			z-index: 2;
+		}
+		&.from {
+			color: @fromColor;
+			z-index: 2;
+		} 
+		
+		u {
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+			letter-spacing: 17px;
+		}
+		
+	}
+	
+	.month {
+		@datePart();
+		width: 100px;
+		left: 30px;
+	}
+	
+	.day {
+		@datePart();
+		width: 70px;
+	}
+	
+	.year {
+		@datePart();
+		left: 20px;
+		width: 130px;
+	}
+	
+	.hour {
+		@datePart();
+		width: 70px;
+		left: 20px;
+	}
+	
+	.min {
+		@datePart();
+		width: 70px;
+		left: 10px;
+	}
+	
+	.timeId {
+		background-color: #000;
+		color: #FFF;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		display: inline;
+		margin-left: 35%;
+		margin-right: auto;
+		padding: 2px 5px;
+		position: relative;
+		top: 3px;
+	}
+	
+}

@@ -1,0 +1,219 @@
+@{
+	
+	var destTime = new DateTime(2016, 3, 30, 11, 0, 0, 0);
+	var nowTime = new DateTime(2015, 10, 20, 18, 30, 0, 0);
+	var fromTime = new DateTime(2002, 1, 5, 10, 0, 0, 0);
+	
+}
+
+@functions{
+	
+	public HtmlString Format(string num) {
+		
+		return new HtmlString(num.Replace("1", "&nbsp;1"));
+		
+	}
+	
+}
+
+
+	<div id="timeCircuits">
+		
+		<div class="timeRow">
+		<!-- DESTINATION -->		
+			<div class="row">
+				<div class="col-sm-3"><span class="lbl">Month</span></div>
+				<div class="col-sm-1"><span class="lbl">Day</span></div>
+				<div class="col-sm-3"><span class="lbl">Year</span></div>
+				<div class="col-sm-1"><span class="lbl">PM</span></div>
+				<div class="col-sm-2"><span class="lbl">Hour</span></div>
+				<div class="col-sm-2"><span class="lbl">Min</span></div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-3">
+					<span class="month">
+						<i class="digit dest bg">888</i>
+						<i class="digit dest">@destTime.ToString("MMM").Substring(0,3)</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-1">
+					<span class="day">
+						<i class="digit dest bg">88</i>
+						<i class="digit dest">@Format(destTime.ToString("dd"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-3">
+					<span class="year">
+						<i class="digit dest bg">8888</i>
+						<i class="digit dest">@Format(destTime.ToString("yyyy"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-1">
+					<span class="pm"></span>
+				</div>
+				
+				
+				<div class="col-sm-2">
+					<span class="hour">
+						<i class="digit dest bg">88</i>
+						<i class="digit dest">@Format(destTime.ToString("hh"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-2">
+					<span class="min">
+						<i class="digit dest bg">88</i>
+						<i class="digit dest">@Format(destTime.ToString("mm"))</i>
+					</span>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12 timeId">
+					destination time	
+				</div>
+				
+			</div>
+
+		</div>
+
+		<div class="row"><br/></div>
+
+		<div class="timeRow">
+		<!-- PRESENT -->		
+			<div class="row">
+				<div class="col-sm-3"><span class="lbl">Month</span></div>
+				<div class="col-sm-1"><span class="lbl">Day</span></div>
+				<div class="col-sm-3"><span class="lbl">Year</span></div>
+				<div class="col-sm-1"><span class="lbl">PM</span></div>
+				<div class="col-sm-2"><span class="lbl">Hour</span></div>
+				<div class="col-sm-2"><span class="lbl">Min</span></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-3">
+					<span class="month">
+						<i class="digit now bg">888</i>
+						<i class="digit now">@nowTime.ToString("MMM").Substring(0,3)</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-1">
+					<span class="day">
+						<i class="digit now bg">88</i>
+						<i class="digit now">@Format(nowTime.ToString("dd"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-3">
+					<span class="year">
+						<i class="digit now bg">8888</i>
+						<i class="digit now">@Format(@nowTime.ToString("yyyy"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-1">
+					<span class="pm"></span>
+				</div>
+				
+				
+				<div class="col-sm-2">
+					<span class="hour">
+						<i class="digit now bg">88</i>
+						<i class="digit now">@Format(nowTime.ToString("hh"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-2">
+					<span class="min">
+						<i class="digit now bg">88</i>
+						<i class="digit now">@Format(nowTime.ToString("mm"))</i>
+					</span>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12 timeId">
+					present time	
+				</div>
+				
+			</div>
+
+		</div>
+		
+		<div class="row"><br/></div>
+
+		<div class="timeRow">
+		<!-- LAST TIME DEPARTED -->		
+			<div class="row">
+				<div class="col-sm-3"><span class="lbl">Month</span></div>
+				<div class="col-sm-1"><span class="lbl">Day</span></div>
+				<div class="col-sm-3"><span class="lbl">Year</span></div>
+				<div class="col-sm-1"><span class="lbl">PM</span></div>
+				<div class="col-sm-2"><span class="lbl">Hour</span></div>
+				<div class="col-sm-2"><span class="lbl">Min</span></div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-3">
+					<span class="month">
+						<i class="digit from bg">888</i>
+						<i class="digit from">@fromTime.ToString("MMM").Substring(0,3)</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-1">
+					<span class="day">
+						<i class="digit from bg">88</i>
+						<i class="digit from">@Format(fromTime.ToString("dd"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-3">
+					<span class="year">
+						<i class="digit from bg">8888</i>
+						<i class="digit from">@Format(fromTime.ToString("yyyy"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-1">
+					<span class="pm"></span>
+				</div>
+				
+				
+				<div class="col-sm-2">
+					<span class="hour">
+						<i class="digit from bg">88</i>
+						<i class="digit from">@Format(fromTime.ToString("hh"))</i>
+					</span>
+				</div>
+				
+				<div class="col-sm-2">
+					<span class="min">
+						<i class="digit from bg">88</i>
+						<i class="digit from">@Format(fromTime.ToString("mm"))</i>
+					</span>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-12 timeId">
+					last time departed	
+				</div>
+				
+			</div>
+
+		</div>
+		
+		<div class="row"><br/></div>
+
+
+	<!-- END TIME CIRCUITS -->		
+	</div>
