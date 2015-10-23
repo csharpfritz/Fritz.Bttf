@@ -35,6 +35,10 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
+# Front-end packages
+node_modules/
+wwwroot/lib
+
 *_i.c
 *_p.c
 *_i.h
