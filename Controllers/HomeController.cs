@@ -20,19 +20,16 @@ namespace Fritz.Bttf.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View("~/Views/Shared/Error.cshtml");
         }
         
         public IActionResult TimeCircuits() {
+            return View();
+        }
+        
+        public IActionResult AsTagHelper() {
             return View();
         }
         

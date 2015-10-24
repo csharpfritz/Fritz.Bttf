@@ -3,10 +3,29 @@
 	<title>Back to the Future Test Page</title>
 	<link rel="stylesheet" type="text/css" href="/less/site.css">
 	<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+	<style>
+		body {
+			margin-left: 30px;
+		}
+		p {
+			max-width: 400px;
+		}
+	</style>
 </head>
 <body>
 	
 	<h1>Test Page</h1>
+	
+	<p>
+		Proof of concept HTML for Marty McFly's time machine's date readout.  
+		All dates are from the second movie, with Biff just arriving in 2015
+		 and Marty preparing to head back to 1985
+	</p>
+	<p>
+		In assembling this proof-of-concept, we learned that the digit 1 with the digital font is aligned
+		left and does not format correctly with the shadow font.  Each 1 is prefixed with a non-breaking space,
+		"&amp;nbsp;" in order to align the digits with the shadow 8 digits behind them. 
+	</p>
 	
 	<div id="timeCircuits">
 		
@@ -97,7 +116,7 @@
 				<div class="col-sm-1">
 					<span class="day">
 						<i class="digit now bg">88</i>
-						<i class="digit now">20</i>
+						<i class="digit now">2&nbsp;1</i>
 					</span>
 				</div>
 				

@@ -96,7 +96,7 @@ namespace Fritz.Bttf.TagHelpers
 			
 			if (FormatDict.ContainsKey(type)) {
 				sb.AppendLine($"<span class=\"{type}\">");
-				sb.AppendLine($"<i class=\"digit {CssMap[Type]} bg\">88</i>");
+				sb.AppendLine($"<i class=\"digit {CssMap[Type]} bg\">{new String('8',FormatDict[type].Length)}</i>");
 				sb.AppendLine($"<i class=\"digit {CssMap[Type]}\">{Format(Date.ToString(FormatDict[type]))}</i>");
 				sb.AppendLine("</span>");
 			}
